@@ -17,10 +17,11 @@ const Hero = () => {
           React Native Microfrontends
         </h1>
         <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300 lg:max-w-5xl">
-          A full website about how to build complex and well-architected mobile
-          microfrontends using React Native. From basic concepts to advanced
-          topics like microfrontend complex architecture, state management, navigation, CI/CD,
-          team organization/scaling and much much more.
+          A comprehensive website about how to build complex and
+          well-architected mobile microfrontends using React Native. From basic
+          concepts to advanced topics like microfrontend complex architecture,
+          state management, navigation, CI/CD, team organization/scaling and
+          much much more.
         </p>
       </div>
     </section>
