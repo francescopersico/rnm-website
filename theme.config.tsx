@@ -7,6 +7,9 @@ const config: DocsThemeConfig = {
     link: "https://github.com/reactnativemicrofrontends/website",
   },
   docsRepositoryBase: "https://github.com/reactnativemicrofrontends/website",
+  footer: {
+    text: "Powered by Nextra.",
+  },
 };
 
 export default config;
