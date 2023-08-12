@@ -10,6 +10,9 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Powered by Nextra.",
   },
+  useNextSeoProps: () => ({
+    titleTemplate: "%s",
+  }),
 };
 
 export default config;
