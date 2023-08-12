@@ -1,5 +1,5 @@
 import React from "react";
-import { DocsThemeConfig } from "nextra-theme-docs";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   logo: <span>React Native Microfrontends</span>,
@@ -10,9 +10,22 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Powered by Nextra.",
   },
-  useNextSeoProps: () => ({
-    titleTemplate: "%s",
-  }),
+  useNextSeoProps: () => {
+    const { frontMatter } = useConfig();
+
+    return {
+      titleTemplate: "%s",
+      openGraph: {
+        images: [
+          {
+            url: frontMatter.image
+              ? `https://www.reactnativemicrofrontends.dev${frontMatter.image}`
+              : "https://www.reactnativemicrofrontends.dev/images/mobile-microfrontends.png",
+          },
+        ],
+      },
+    };
+  },
 };
 
 export default config;
