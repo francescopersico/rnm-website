@@ -10,13 +10,15 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Powered by Nextra.",
   },
+  head: null,
   useNextSeoProps: () => {
     const { frontMatter } = useConfig();
 
-    console.log(frontMatter);
-
     return {
       titleTemplate: "%s",
+      description:
+        frontMatter.description ||
+        "A comprehensive website about how to build scalable, maintainable and well-architected mobile microfrontends using React Native",
       openGraph: {
         title: frontMatter.title || "React Native Microfrontends",
         description:
