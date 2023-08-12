@@ -13,9 +13,15 @@ const config: DocsThemeConfig = {
   useNextSeoProps: () => {
     const { frontMatter } = useConfig();
 
+    console.log(frontMatter);
+
     return {
       titleTemplate: "%s",
       openGraph: {
+        title: frontMatter.title || "React Native Microfrontends",
+        description:
+          frontMatter.description ||
+          "A comprehensive website about how to build scalable, maintainable and well-architected mobile microfrontends using React Native",
         images: [
           {
             url: frontMatter.image
